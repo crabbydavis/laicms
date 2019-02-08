@@ -1,0 +1,18 @@
+mat-card {
+  .upload {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    .upload-bar {
+      margin-top: 5px;
+      height: 10px;
+      width: 100%;
+      background-color: white;
+      .upload-percent {
+        background-color: green;
+        height: 10px;
+      }
+    }
+  }
+}
