@@ -1,9 +1,19 @@
 mat-card {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 100px;
+  mat-form-field {
+    width: 50%;
+  }
+  .picker {
+    margin: 20px;
+  }
   .upload {
     margin-top: 15px;
     margin-left: 10px;
     margin-right: 10px;
     color: white;
+    border: 1px solid green;
     .upload-bar {
       margin-top: 5px;
       height: 10px;
@@ -14,5 +24,8 @@ mat-card {
         height: 10px;
       }
     }
+  }
+  form {
+    margin-bottom: 50px;
   }
 }

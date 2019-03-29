@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: 'AIzaSyCgAsO2VUFcVwFkprirskKeO_BoLSe2-Bg',
-    authDomain: 'live-all-in.firebaseapp.com',
-    databaseURL: 'https://live-all-in.firebaseio.com',
-    projectId: 'live-all-in',
-    storageBucket: 'live-all-in.appspot.com',
-    messagingSenderId: '918875665110'
+    apiKey: 'AIzaSyB58rve95XzCz4JqvZaPEtz0Q5B4C0zTEI',
+    authDomain: 'live-all-in-17081.firebaseapp.com',
+    databaseURL: 'https://live-all-in-17081.firebaseio.com',
+    projectId: 'live-all-in-17081',
+    storageBucket: 'live-all-in-17081.appspot.com',
+    messagingSenderId: '339207702994'
   }
 };

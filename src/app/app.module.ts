@@ -44,10 +44,12 @@ import {
   MatTooltipModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddUserComponent } from './user/add-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AddUserComponent,
     HeaderComponent,
     LoginComponent,
     SongsComponent,

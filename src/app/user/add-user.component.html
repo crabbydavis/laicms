@@ -1,0 +1,53 @@
+<mat-card>
+    <form [formGroup]="form" (submit)="submit()">
+
+    <mat-form-field>
+      <input matInput type="text" formControlName="email" required placeholder="Email">
+      <mat-error *ngIf="form.get('email').invalid">Email</mat-error>
+    </mat-form-field><br>
+    <mat-form-field>
+      <input matInput type="text" formControlName="firstName" required placeholder="First Name">
+      <mat-error *ngIf="form.get('firstName').invalid">First Name</mat-error>
+    </mat-form-field><br>
+    <mat-form-field>
+      <input matInput type="text" formControlName="lastName" required placeholder="Last Name">
+      <mat-error *ngIf="form.get('lastName').invalid">Last Name</mat-error>
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-select formControlName="planName" required placeholder="Plan Name">
+        <mat-option value="Early Bird Annual Plan">Early Bird Annual Plan</mat-option>
+        <mat-option value="Month to Month">Month to Month</mat-option>
+        <mat-option value="Annual Plan">Annual Plan</mat-option>
+      </mat-select>
+    </mat-form-field><br>
+    <!-- <mat-form-field>
+      <input matInput type="text" formControlName="planName" required placeholder="Plan Name">
+      <mat-error *ngIf="form.get('planName').invalid">Plan Name</mat-error>
+    </mat-form-field><br> -->
+    <mat-form-field>
+      <mat-select formControlName="planType" required placeholder="Plan Type">
+        <mat-option value="charge">Annual</mat-option>
+        <mat-option value="subscription">Monthly</mat-option>
+      </mat-select>
+    </mat-form-field><br>
+    <!-- <mat-form-field>
+      <input matInput type="text" formControlName="planType" required placeholder="Plan Type">
+      <mat-error *ngIf="form.get('planType').invalid">Plan Type</mat-error>
+    </mat-form-field><br> -->
+    <mat-form-field>
+      <input matInput type="text" formControlName="signUpDate" required placeholder="Sign Up Date ie 3/5/19">
+      <mat-error *ngIf="form.get('signUpDate').invalid">Sign Up Date</mat-error>
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-select formControlName="status" required placeholder="Status">
+        <mat-option value="active">Active</mat-option>
+        <mat-option value="canceled">Canceled</mat-option>
+      </mat-select>
+    </mat-form-field><br>
+    <!-- <mat-form-field>
+      <input matInput type="text" formControlName="status" required placeholder="Status">
+      <mat-error *ngIf="form.get('status').invalid">Status</mat-error>
+    </mat-form-field><br> -->
+    <button mat-raised-button color="accent" type="submit">Save User</button>
+    </form>
+</mat-card>

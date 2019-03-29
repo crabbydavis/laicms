@@ -1,9 +1,15 @@
 export class User {
   constructor(
-    public name: string = '',
     public email: string = '',
-    public type: UserType = null,
-    public uid: string = ''
+    public firstName: string = '',
+    public lastName: string = '',
+    public planID: string = '',
+    public planName: string = '',
+    public planType: string = '',
+    public signUpDate: string = '',
+    public status: string = '',
+    // public type: UserType = null,
+    // public uid: string = ''
   ) {}
 }
 

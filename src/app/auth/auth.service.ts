@@ -17,6 +17,12 @@ export class AuthService {
     this.usersCollection = this.db.collection<User>('users');
   }
 
+  addUserToDB(user: User): void {
+    this.usersCollection.doc(user.email).set({
+      ...user
+    }, { merge: true });
+  }
+
   getAllUsers(): Observable<User[]> {
     return this.usersCollection.valueChanges();
   }
@@ -82,17 +88,13 @@ export class AuthService {
     }
   }
 
-  updateUser(user: User): Promise<any> {
+  updateUser(user: User): any { //Promise<any> {
+    const date = new Date(user.signUpDate);
+    console.log(date);
+    user.signUpDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} 16:29:41 UTC`;
+    console.log(user.signUpDate);
     return this.usersCollection.doc(user.email).set({
-      // mjkId: user.mjkId,
-      // name: user.name,
-      // email: user.email,
-      // phone: user.phone,
-      // locations: user.locations,
-      // type: user.type,
-      // uid: user.uid
-    }, {
-      merge: true
-    });
+      ...user
+    }, { merge: true });
   }
 }
